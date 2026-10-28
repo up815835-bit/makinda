@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> Mini/Street Fighter Tutorial</title>
+        <style>
+            html, 
+            body {
+                padding: 0; 
+                margin: 0;
+                height: 100%;
+            }
+
+            body {
+                display: flex;
+                min-height: 100vh;
+                overflow: hidden;
+                background-image: url('./images/sagatbackground.gif');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            body,
+            canvas {
+                background-color: black;
+            }
+            canvas {
+                display: block;
+                width:100%;
+                height: 100vh;
+                object-fit: contain;
+                image-rendering: crisp-edges;
+                image-rendering: pixelated;
+            }
+            img { 
+                display: none;
+            }
+        </style>
+        <script type = "module" src="./Src/minifighter.js"></script>
+    </head>
+    <body>
+        <canvas id="game-canvas" width="384" height="224"></canvas>
+         <img id="sagat-image" src="./images/sagat.png" alt="sagat">
+         <img id="sagatbackground-image" src="./images/sagatbackground.gif" alt="Sagat background">
+         <img id="cammy-image" src="./images/cammy.png" alt="Cammy">
+    </body> 
+</html>
